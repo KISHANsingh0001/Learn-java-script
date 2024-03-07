@@ -2,7 +2,7 @@
 // * Primitive data types  (These are all call by value)
 //   These are 7 types : 
 // 1.Number: Represents both integer and floating - point numbers.Example: 5, 3.14.
- 
+
 // 2.String: Represents a sequence of characters enclosed in single or double quotes.Example: "Hello, world!".
 
 // 3, Boolean: Represents a binary value, either true or false, often used for conditional logic.
@@ -19,17 +19,17 @@
 //     Refence(Object Data Types):
 
 // 1.Object: Represents a collection of key - value pairs(properties and methods).Example: { name: "John", age: 30 }.
-   let myObj = {
-              name: "kishan",
-              age : 19,
-   }
+let myObj = {
+   name: "kishan",
+   age: 19,
+}
 // 2.Array: Represents a list - like collection of values, indexed by numbers(integer indices).Example: [1, 2, 3, 4].
-   const cars = ["BMW" ,"Audi" , "Jeguar" , "RangeRover"];
+const cars = ["BMW", "Audi", "Jeguar", "RangeRover"];
 // 3.Function: Represents a reusable block of code that can be invoked or called with arguments.
 //             Example: function add(x, y) { return x + y; }.
-  const myFunction = function(){
-        console.log("Hello World");
-  }
+const myFunction = function () {
+   console.log("Hello World");
+}
 
 // Reference (non-primitive)
 //   Array , Object , Functions
@@ -49,5 +49,41 @@
 //        Function  =>  function
 //        Object  =>  object
 //***********************************************************************************
-// So javaScript are the dymnamically typed
+// JavaScript is a dynamically typed language. This means that you don't need to specify the data type of a variable when you declare it.
+
+//**************************************************************** 
+//                         Stack and Heap Memory
+
+// datatypes are based on memory allocation
+// Primitive datatypes->  call by value (string,number,boolean,null,undefined,BigInt,symbol) ->Stack memory
+
+// Reference/Non primitive data types -> call by reference ( array,object, function) -> heap memory
+
+// Example of stack memory 
+let myYoutubeName = "kishanSinghThakur.code"
+
+let anotherYoutubeName = myYoutubeName;
+console.log(anotherYoutubeName);
+anotherYoutubeName = "CarsOfTheKishan's"
+console.log(myYoutubeName);
+console.log(anotherYoutubeName);
+
+// Example of Heap memory
+let carOne = {
+       name: "BMW M5",
+       color: "Dark Green",
+       speed: 370 
+}
+let carTwo = {
+       name: "Audi RS7",
+       color: "Black",
+       speed: 300
+}
+console.log(carOne);
+console.log(carTwo);
+carOne.name = carTwo.name;
+console.log(carOne);
+console.log(carTwo);
+
+
 
